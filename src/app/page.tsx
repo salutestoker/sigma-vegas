@@ -50,7 +50,7 @@ export default function Home() {
                                 d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                             />
                         </svg>
-                        7pm
+                        8pm
                     </div>
                     <div className="flex w-[calc(50%-5px)] items-center justify-center gap-1 bg-[#e935cb95] px-2 py-2 sm:w-auto sm:px-6">
                         <svg
