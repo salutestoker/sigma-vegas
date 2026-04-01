@@ -3,13 +3,13 @@ import Image from 'next/image';
 export default function Home() {
     return (
         <div className="relative h-dvh w-dvw overflow-hidden font-sans dark:bg-black">
-            <div className="absolute top-1/2 left-1/2 z-20 flex -translate-1/2 flex-col gap-3 p-2 text-black">
+            <div className="absolute top-1/2 left-1/2 z-20 flex -translate-1/2 flex-col gap-3 text-black">
                 <div className="flex items-center justify-center gap-1 bg-[#e935cb95] px-6 py-1">
                     LAS VEGAS AFTER PARTY
                 </div>
                 <div className="bg-[#e935cb95] px-5 py-6">
                     <Image
-                        className="mx-auto max-w-none invert"
+                        className="mx-auto max-w-[80vw] invert"
                         src="/images/main_sigma_logo_white.png"
                         alt="Sigma logo"
                         width={400}
@@ -35,7 +35,7 @@ export default function Home() {
                         </svg>
                         Thursday - April 30th, 2026
                     </div>
-                    <div className="flex w-[49%] items-center justify-center gap-1 bg-[#e935cb95] px-2 py-2 sm:w-auto sm:px-6">
+                    <div className="flex w-[calc(50%-5px)] items-center justify-center gap-1 bg-[#e935cb95] px-2 py-2 sm:w-auto sm:px-6">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -52,7 +52,7 @@ export default function Home() {
                         </svg>
                         7pm
                     </div>
-                    <div className="flex w-[49%] items-center justify-center gap-1 bg-[#e935cb95] px-2 py-2 sm:w-auto sm:px-6">
+                    <div className="flex w-[calc(50%-5px)] items-center justify-center gap-1 bg-[#e935cb95] px-2 py-2 sm:w-auto sm:px-6">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
