@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --btn-primary-top: #9a7cff;
+    --btn-primary-mid: #6d42ef;
+    --btn-primary-bottom: #4d2bb9;
+    --btn-primary-shadow: #1f1250;
+    --btn-primary-border: #07040f;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-impact);
+    --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family:
+        var(--font-impact), Impact, Haettenschweiler, 'Arial Narrow Bold',
+        Arial, sans-serif;
+}
+
+.animate-saturation-scale {
+    animation: pulseSaturationScale 30s ease infinite;
+}
+
+.animate-saturation {
+    animation: pulseSaturation 30s ease infinite;
+}
+
+.primary-button {
+    position: relative;
+    border-radius: 15px 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2.6rem;
+    background: #4d2cb9;
+    background: linear-gradient(
+        0deg,
+        rgba(77, 44, 185, 1) 45%,
+        rgba(118, 70, 255, 1) 53%
+    );
+    color: #fff;
+    line-height: 1;
+    text-transform: uppercase;
+    min-width: 160px;
+}
+
+@keyframes pulseSaturationScale {
+    0% {
+        filter: hue-rotate(0);
+        transform: scale(1);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+        transform: scale(1.05);
+    }
+    100% {
+        filter: hue-rotate(0);
+        transform: scale(1);
+    }
+}
+
+@keyframes pulseSaturation {
+    0% {
+        filter: hue-rotate(0);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+    100% {
+        filter: hue-rotate(0);
+    }
+}
