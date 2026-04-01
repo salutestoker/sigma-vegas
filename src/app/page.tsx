@@ -7,9 +7,9 @@ export default function Home() {
                 <div className="flex items-center justify-center gap-1 bg-[#e935cb95] px-6 py-1">
                     LAS VEGAS AFTER PARTY
                 </div>
-                <div className="bg-[#e935cb95] py-6">
+                <div className="bg-[#e935cb95] px-5 py-6">
                     <Image
-                        className="mx-auto invert"
+                        className="mx-auto max-w-none invert"
                         src="/images/main_sigma_logo_white.png"
                         alt="Sigma logo"
                         width={400}
@@ -17,8 +17,8 @@ export default function Home() {
                         priority
                     />
                 </div>
-                <div className="flex justify-stretch gap-2">
-                    <div className="flex items-center gap-1 bg-[#e935cb95] px-6 py-2">
+                <div className="flex flex-wrap justify-between gap-2 sm:flex-nowrap sm:justify-stretch">
+                    <div className="flex w-full items-center justify-center gap-1 bg-[#e935cb95] px-2 py-2 sm:w-auto sm:px-6">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -35,7 +35,7 @@ export default function Home() {
                         </svg>
                         Thursday - April 30th, 2026
                     </div>
-                    <div className="flex items-center gap-1 bg-[#e935cb95] px-6 py-2">
+                    <div className="flex w-[49%] items-center justify-center gap-1 bg-[#e935cb95] px-2 py-2 sm:w-auto sm:px-6">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -52,7 +52,7 @@ export default function Home() {
                         </svg>
                         7pm
                     </div>
-                    <div className="flex items-center gap-1 bg-[#e935cb95] px-6 py-2">
+                    <div className="flex w-[49%] items-center justify-center gap-1 bg-[#e935cb95] px-2 py-2 sm:w-auto sm:px-6">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -76,10 +76,10 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="absolute top-0 left-0 z-10 h-full w-full bg-black/75"></div>
+            <div className="absolute top-0 left-0 z-10 h-screen w-screen bg-black/75"></div>
             <div>
                 <video
-                    className="h-full w-full object-cover"
+                    className="absolute h-full w-full object-cover"
                     src="/videos/sigma-vegas-intro.mp4"
                     autoPlay
                     loop
