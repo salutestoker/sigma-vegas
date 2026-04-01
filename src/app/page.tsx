@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Home() {
     return (
         <div className="relative h-dvh w-dvw overflow-hidden font-sans dark:bg-black">
-            <div className="absolute top-1/2 left-1/2 z-20 flex -translate-1/2 flex-col gap-3 text-black">
+            <div className="absolute top-1/2 left-1/2 z-20 flex -translate-1/2 flex-col gap-3 p-2 text-black">
                 <div className="flex items-center justify-center gap-1 bg-[#e935cb95] px-6 py-1">
                     LAS VEGAS AFTER PARTY
                 </div>
