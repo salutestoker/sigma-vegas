@@ -1,19 +1,6 @@
 import type { Metadata } from 'next';
-import { Geist_Mono } from 'next/font/google';
-import localFont from 'next/font/local';
+import { appFontVariables } from './fonts';
 import './globals.css';
-
-const impact = localFont({
-    src: './fonts/Impact.ttf',
-    variable: '--font-impact',
-    display: 'swap',
-    fallback: ['Haettenschweiler', 'Arial Narrow Bold', 'Arial', 'sans-serif'],
-});
-
-const geistMono = Geist_Mono({
-    variable: '--font-geist-mono',
-    subsets: ['latin'],
-});
 
 export const metadata: Metadata = {
     title: 'SIGMA on XRPL | Las Vegas After Party',
@@ -26,11 +13,30 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html
-            lang="en"
-            className={`${impact.variable} ${geistMono.variable} h-full antialiased`}
-        >
-            <body className="flex min-h-full flex-col">{children}</body>
+        <html lang="en" className={`${appFontVariables} h-full antialiased`}>
+            <body
+                style={{
+                    backgroundImage: 'url(/images/sigma-vegas-bg.jpg)',
+                    backgroundSize: '1200px',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundColor: '#b10000',
+                    backgroundPosition: 'center bottom',
+                }}
+                className="font-secondary flex min-h-full flex-col overflow-hidden"
+            >
+                {children}
+                <div className="fixed top-0 left-0 h-screen w-screen bg-[#ff0000] mix-blend-multiply"></div>
+                <div className="fixed top-0 left-0 z-[-1] h-screen w-screen mix-blend-color-burn">
+                    <video
+                        className="opacity-[.1]"
+                        src="/videos/sigma-vegas-intro.mp4"
+                        muted
+                        autoPlay
+                        playsInline
+                        loop
+                    ></video>
+                </div>
+            </body>
         </html>
     );
 }

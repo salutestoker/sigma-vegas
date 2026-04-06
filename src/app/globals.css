@@ -3,9 +3,10 @@
 :root {
     --background: #ffffff;
     --foreground: #171717;
-    --btn-primary-top: #9a7cff;
-    --btn-primary-mid: #6d42ef;
-    --btn-primary-bottom: #4d2bb9;
+    --pink-primary: #dd33aa;
+    --btn-primary-top: #dd33aa;
+    --btn-primary-mid: #dd33aa;
+    --btn-primary-bottom: #9b2377;
     --btn-primary-shadow: #1f1250;
     --btn-primary-border: #07040f;
 }
@@ -13,8 +14,12 @@
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
-    --font-sans: var(--font-impact);
+    --color-pink-primary: var(--pink-primary);
+    --font-sans: var(--font-nasalization);
     --font-mono: var(--font-geist-mono);
+    --font-impact: var(--font-impact-face);
+    --font-heading: var(--font-disco);
+    --font-secondary: var(--font-nasalization);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,10 +30,19 @@
 }
 
 body {
-    background: var(--background);
     color: var(--foreground);
+    font-family: var(--font-secondary), 'Trebuchet MS', Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
     font-family:
-        var(--font-impact), Impact, Haettenschweiler, 'Arial Narrow Bold',
+        var(--font-heading), Impact, Haettenschweiler, 'Arial Narrow Bold',
         Arial, sans-serif;
 }
 
@@ -42,20 +56,89 @@ body {
 
 .primary-button {
     position: relative;
-    border-radius: 15px 15px;
+    border-radius: 10px 10px;
+    border: none;
     align-items: center;
     justify-content: center;
     padding: 0.75rem 2.6rem;
-    background: #4d2cb9;
-    background: linear-gradient(
-        0deg,
-        rgba(77, 44, 185, 1) 45%,
-        rgba(118, 70, 255, 1) 53%
-    );
-    color: #fff;
+    background: var(--btn-primary-mid);
+    color: #000;
     line-height: 1;
     text-transform: uppercase;
-    min-width: 160px;
+    text-align: center;
+}
+
+.word-rotator {
+    width: min(92vw, 900px);
+    line-height: 1.2;
+}
+
+.word-rotator__label {
+    display: inline;
+}
+
+.word-rotator__words {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    vertical-align: bottom;
+    text-align: left;
+    transition: width 220ms ease;
+}
+
+.word-rotator__punctuation {
+    display: inline-block;
+}
+
+.word-rotator__word {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.word-rotator__word.is-visible {
+    position: relative;
+    top: 0;
+    opacity: 1;
+    animation: word-rotator-slide-in 0.6s;
+}
+
+.word-rotator__word.is-hidden {
+    animation: word-rotator-slide-out 0.6s;
+}
+
+@keyframes word-rotator-slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes word-rotator-slide-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(120%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
 }
 
 @keyframes pulseSaturationScale {
@@ -94,4 +177,8 @@ body {
     top: 0;
     z-index: 100;
     background: red;
+}
+
+button {
+    cursor: pointer;
 }
