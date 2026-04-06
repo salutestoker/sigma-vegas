@@ -80,19 +80,21 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="mx-auto mt-2 grid w-full max-w-[400px] grid-cols-1 justify-center gap-2 px-2 md:max-w-[680px] md:grid-cols-2 lg:max-w-[980px] lg:grid-cols-4">
+                    <div className="mx-auto mt-2 grid w-full max-w-[400px] grid-cols-1 justify-center gap-2 px-2 md:max-w-[680px] md:grid-cols-2 lg:max-w-[680px] lg:grid-cols-2">
                         <EventbriteModalButton
                             eventId="1986755224358"
                             ticketUrl="https://www.eventbrite.com/e/xrp-vegas-after-party-2026-tickets-1986755224358"
                             className="primary-button"
                             label="RSVP"
                         />
+                        {/*
                         <a href="#" className="primary-button">
                             Sponsor Event
                         </a>
                         <a href="#" className="primary-button">
                             Become VIP
                         </a>
+                        */}
                         <NftPerksOverlayButton triggerClassName="primary-button" />
                     </div>
                 </div>
