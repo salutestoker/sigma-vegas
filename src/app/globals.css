@@ -68,6 +68,12 @@ h6 {
     text-align: center;
 }
 
+.primary-button:focus,
+.primary-button:border {
+    outline: none;
+    border: none;
+}
+
 .word-rotator {
     width: min(92vw, 900px);
     line-height: 1.2;

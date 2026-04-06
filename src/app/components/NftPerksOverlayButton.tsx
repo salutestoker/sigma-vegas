@@ -123,7 +123,6 @@ export default function NftPerksOverlayButton({
         isOpen && typeof document !== 'undefined'
             ? createPortal(
                   <div className="fixed inset-0 z-[120] h-screen w-screen bg-black">
-                      <div className="fixed z-10 h-screen w-screen bg-black/75"></div>
                       <div className="fixed z-20 flex h-screen w-screen flex-col items-center justify-center">
                           <h1 className="text-pink-primary font-heading flex flex-col items-center justify-center gap-1 px-6 py-1 text-center text-7xl tracking-wide">
                               <span className="font-secondary text-2xl">
@@ -133,7 +132,7 @@ export default function NftPerksOverlayButton({
                           </h1>
                           <div
                               ref={rotatorRef}
-                              className="word-rotator mt-2 text-center text-lg text-white sm:text-2xl"
+                              className="word-rotator mt-2 text-center text-lg text-[#ff0000] sm:text-2xl"
                           >
                               <span className="word-rotator__label">
                                   If you own a SIGMA NFT you get{' '}
@@ -142,7 +141,7 @@ export default function NftPerksOverlayButton({
                                   {rotatorWords.map((word, index) => (
                                       <span
                                           key={word}
-                                          className={`bg-pink-primary word-rotator__word px-2 ${index === 0 ? 'is-visible' : ''}`}
+                                          className={`word-rotator__word bg-[#ff0000] px-2 text-white ${index === 0 ? 'is-visible' : ''}`}
                                       >
                                           {word}
                                       </span>
@@ -152,23 +151,26 @@ export default function NftPerksOverlayButton({
                                   .
                               </span>
                           </div>
-                          <div className="mt-8 flex items-center gap-2">
+                          <div className="mx-auto mt-8 flex w-full flex-col items-center gap-2 px-2 sm:flex-row md:max-w-[680px]">
                               <a
                                   target="_blank"
                                   href="https://xrp.cafe/collection/sigmaonxrpl?sort=low"
-                                  className="primary-button min-w-[270px]"
+                                  className="primary-button w-full min-w-[270px]"
                               >
                                   Buy Off Floor
                               </a>
                               <a
                                   target="_blank"
                                   href="https://docs.google.com/forms/d/e/1FAIpQLSeefKoJ8H93LoNaFeHuoAK1TD8NbuquRFzRymQe3eYsU_hG4Q/viewform?pli=1"
-                                  className="primary-button min-w-[270px]"
+                                  className="primary-button w-full min-w-[270px]"
                               >
                                   Request Custom NFT
                               </a>
                           </div>
                       </div>
+                      <div className="fixed top-0 left-0 z-10 h-screen w-screen bg-black/80"></div>
+                      <div className="fixed top-0 left-0 z-[1] h-screen w-screen bg-[#ff0000] opacity-[1] mix-blend-saturation"></div>
+
                       <video
                           className="h-full w-full object-cover"
                           src="/videos/sigma-vegas-nfts.mp4"
