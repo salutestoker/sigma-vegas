@@ -133,7 +133,7 @@ export default function NftPerksOverlayButton({
                           </h1>
                           <div
                               ref={rotatorRef}
-                              className="word-rotator mt-2 text-center text-lg sm:text-2xl"
+                              className="word-rotator mt-2 text-center text-lg text-white sm:text-2xl"
                           >
                               <span className="word-rotator__label">
                                   If you own a SIGMA NFT you get{' '}
