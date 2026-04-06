@@ -15,7 +15,7 @@ export default function NftPerksOverlayButton({
     const rotatorWords = [
         'free food',
         'free drinks',
-        'no wait',
+        'no waiting in line',
         'surprise giveaways',
     ];
 
@@ -158,7 +158,7 @@ export default function NftPerksOverlayButton({
                                       </span>
                                   ))}
                               </span>
-                              <span className="word-rotator__punctuation">
+                              <span className="word-rotator__punctuation ml-[5px]">
                                   .
                               </span>
                           </div>
