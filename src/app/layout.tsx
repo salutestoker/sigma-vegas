@@ -26,9 +26,9 @@ export default function RootLayout({
             >
                 {children}
                 <div className="fixed top-0 left-0 h-screen w-screen bg-[#ff0000] opacity-[.9] mix-blend-multiply"></div>
-                <div className="fixed top-0 left-0 z-[-1] h-screen w-screen mix-blend-color-burn">
+                <div className="absolute top-0 left-0 z-[-1] h-screen w-screen mix-blend-color-burn">
                     <video
-                        className="opacity-[.1]"
+                        className="aboslute min-h-screen max-w-none object-cover opacity-[.1]"
                         src="/videos/sigma-vegas-intro.mp4"
                         muted
                         autoPlay

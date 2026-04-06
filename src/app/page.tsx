@@ -7,7 +7,7 @@ export default function Home() {
             <div className="font-primary font-impact flex w-full items-center justify-center text-black/75 sm:hidden">
                 <div className="flex items-center gap-1">
                     <div className="flex w-full items-center justify-center gap-1 px-1 py-2">
-                        April 30th, 2026, 8pm - 12pm @ Hard Rock Cafe
+                        April 30th, 2026, 8pm - 12am @ Hard Rock Cafe
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@ export default function Home() {
                                         d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                                     />
                                 </svg>
-                                8pm
+                                8pm - 12am
                             </div>
                             <div className="flex w-[calc(50%-5px)] items-center justify-center gap-1 px-2 py-2 sm:w-auto">
                                 <svg
