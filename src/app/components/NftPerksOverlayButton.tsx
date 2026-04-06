@@ -135,7 +135,7 @@ export default function NftPerksOverlayButton({
                       {/*<div className="blend-color-burn blend-layer-mobile absolute inset-0 z-[11] bg-[#ff0000] opacity-[.7]"></div>*/}
 
                       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center">
-                          <h1 className="text-pink-primary font-heading flex flex-col items-center justify-center gap-1 px-6 py-1 text-center text-7xl tracking-wide">
+                          <h1 className="text-pink-primary font-heading flex flex-col items-center justify-center gap-1 px-6 py-1 text-center text-5xl tracking-wide sm:text-7xl">
                               <span className="font-secondary text-2xl">
                                   SIGMA NFT
                               </span>

@@ -13,7 +13,7 @@ export default function Home() {
             </div>
             <div className="relative h-dvh w-dvw overflow-hidden font-sans">
                 <div className="text-pink-primary absolute left-1/2 z-40 flex w-full -translate-x-1/2 flex-col gap-3 md:top-[10%]">
-                    <h1 className="font-heading mt-[5%] flex flex-col items-center justify-center gap-1 px-6 py-1 text-center text-7xl tracking-wide sm:mt-0">
+                    <h1 className="font-heading mt-[5%] flex flex-col items-center justify-center gap-1 px-6 py-1 text-center text-5xl tracking-wide sm:mt-0 sm:text-7xl">
                         <span className="font-secondary text-4xl">
                             XRP VEGAS
                         </span>
