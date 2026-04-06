@@ -29,6 +29,12 @@
     }
 }
 
+html,
+body {
+    min-height: 100%;
+    min-height: -webkit-fill-available;
+}
+
 body {
     color: var(--foreground);
     font-family: var(--font-secondary), 'Trebuchet MS', Arial, sans-serif;
@@ -69,9 +75,69 @@ h6 {
 }
 
 .primary-button:focus,
-.primary-button:border {
+.primary-button:focus-visible {
     outline: none;
     border: none;
+}
+
+.viewport-full {
+    width: 100vw;
+    height: 100vh;
+    height: 100svh;
+    height: 100dvh;
+    min-height: -webkit-fill-available;
+}
+
+.viewport-fixed-layer {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100svh;
+    height: 100dvh;
+    min-height: -webkit-fill-available;
+    pointer-events: none;
+}
+
+.media-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blend-layer-mobile {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform, opacity;
+}
+
+.blend-multiply {
+    mix-blend-mode: multiply;
+}
+
+.blend-color-burn {
+    mix-blend-mode: color-burn;
+}
+
+.blend-saturation {
+    mix-blend-mode: saturation;
+}
+
+@supports not (mix-blend-mode: multiply) {
+    .blend-multiply,
+    .blend-color-burn,
+    .blend-saturation {
+        mix-blend-mode: normal;
+    }
+
+    .blend-multiply {
+        opacity: 0.75;
+    }
+
+    .blend-color-burn,
+    .blend-saturation {
+        opacity: 0.35;
+    }
 }
 
 .word-rotator {

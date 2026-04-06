@@ -87,15 +87,20 @@ export default function Home() {
                             className="primary-button"
                             label="RSVP"
                         />
-                        {/*
-                        <a href="#" className="primary-button">
+                        <NftPerksOverlayButton triggerClassName="primary-button" />
+
+                        <a
+                            href="mailto:sigmaonxrplnfts@gmail.com"
+                            className="primary-button"
+                        >
                             Sponsor Event
                         </a>
-                        <a href="#" className="primary-button">
+                        <a
+                            href="mailto:sigmaonxrplnfts@gmail.com"
+                            className="primary-button"
+                        >
                             Become VIP
                         </a>
-                        */}
-                        <NftPerksOverlayButton triggerClassName="primary-button" />
                     </div>
                 </div>
                 {/*<div className="absolute top-0 left-0 z-20 h-screen w-screen bg-black/70"></div>*/}

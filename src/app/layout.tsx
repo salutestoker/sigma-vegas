@@ -14,28 +14,34 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className={`${appFontVariables} h-full antialiased`}>
-            <body
-                style={{
-                    backgroundImage: 'url(/images/sigma-vegas-bg.jpg)',
-                    backgroundSize: '1200px',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundColor: '#b10000',
-                    backgroundPosition: 'center bottom',
-                }}
-                className="font-secondary flex min-h-full flex-col overflow-hidden"
-            >
-                {children}
-                <div className="fixed top-0 left-0 h-screen w-screen bg-[#ff0000] opacity-[.9] mix-blend-multiply"></div>
-                <div className="absolute top-0 left-0 z-[-1] h-screen w-screen mix-blend-color-burn">
+            <body className="font-secondary relative isolate flex min-h-full flex-col overflow-hidden">
+                <div className="relative z-20 flex min-h-full flex-col">
+                    {children}
+                </div>
+
+                <div
+                    style={{
+                        backgroundImage: 'url(/images/sigma-vegas-bg.jpg)',
+                        backgroundSize: '1200px',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundColor: '#b10000',
+                        backgroundPosition: 'center bottom',
+                    }}
+                    className="absolute inset-0 z-10 bg-cover bg-center bg-no-repeat"
+                ></div>
+
+                <div className="viewport-fixed-layer blend-layer-mobile blend-color-burn z-10">
                     <video
-                        className="aboslute min-h-screen max-w-none object-cover opacity-[.1]"
+                        className="media-cover opacity-[0.14]"
                         src="/videos/sigma-vegas-intro.mp4"
                         muted
                         autoPlay
                         playsInline
                         loop
-                    ></video>
+                    />
                 </div>
+
+                <div className="viewport-fixed-layer blend-layer-mobile blend-multiply z-10 bg-[#ff0000] opacity-[0.9]"></div>
             </body>
         </html>
     );

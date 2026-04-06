@@ -122,8 +122,19 @@ export default function NftPerksOverlayButton({
     const overlay =
         isOpen && typeof document !== 'undefined'
             ? createPortal(
-                  <div className="fixed inset-0 z-[120] h-screen w-screen bg-black">
-                      <div className="fixed z-20 flex h-screen w-screen flex-col items-center justify-center">
+                  <div className="viewport-full fixed inset-0 isolate z-[120] bg-black">
+                      <video
+                          className="media-cover absolute inset-0 z-0"
+                          src="/videos/sigma-vegas-nfts-final.mp4"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                      />
+                      <div className="absolute inset-0 z-10 bg-black/70"></div>
+                      {/*<div className="blend-color-burn blend-layer-mobile absolute inset-0 z-[11] bg-[#ff0000] opacity-[.7]"></div>*/}
+
+                      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center">
                           <h1 className="text-pink-primary font-heading flex flex-col items-center justify-center gap-1 px-6 py-1 text-center text-7xl tracking-wide">
                               <span className="font-secondary text-2xl">
                                   SIGMA NFT
@@ -168,21 +179,14 @@ export default function NftPerksOverlayButton({
                               </a>
                           </div>
                       </div>
-                      <div className="fixed top-0 left-0 z-10 h-screen w-screen bg-black/80"></div>
-                      <div className="fixed top-0 left-0 z-[1] h-screen w-screen bg-[#ff0000] opacity-[1] mix-blend-saturation"></div>
-
-                      <video
-                          className="h-full w-full object-cover"
-                          src="/videos/sigma-vegas-nfts.mp4"
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                      />
                       <button
                           type="button"
                           aria-label="Close NFT perks video"
-                          className="absolute top-4 right-4 z-[121] flex h-7 w-7 items-center justify-center rounded-full bg-black/70 text-xl leading-none text-white transition hover:bg-black"
+                          className="absolute z-[121] flex h-7 w-7 items-center justify-center rounded-full bg-black/70 text-xl leading-none text-white transition hover:bg-black"
+                          style={{
+                              top: 'calc(env(safe-area-inset-top, 0px) + 0.75rem)',
+                              right: 'calc(env(safe-area-inset-right, 0px) + 0.75rem)',
+                          }}
                           onClick={() => setIsOpen(false)}
                       >
                           &times;
