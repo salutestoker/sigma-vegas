@@ -25,7 +25,7 @@ export default function RootLayout({
                 className="font-secondary flex min-h-full flex-col overflow-hidden"
             >
                 {children}
-                <div className="fixed top-0 left-0 h-screen w-screen bg-[#ff0000] opacity-[.6] mix-blend-darken"></div>
+                <div className="fixed top-0 left-0 h-screen w-screen bg-[#ff0000] opacity-[.9] mix-blend-multiply"></div>
                 <div className="fixed top-0 left-0 z-[-1] h-screen w-screen mix-blend-color-burn">
                     <video
                         className="opacity-[.1]"
