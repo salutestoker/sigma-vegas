@@ -107,7 +107,7 @@ export default function Home() {
                 {/*<div className="absolute top-0 left-0 z-10 h-screen w-screen bg-red-500 mix-blend-color-burn"></div>*/}
             </div>
 
-            <div className="absolute bottom-0 left-0 z-50 flex w-full translate-y-[5%] items-center justify-center sm:translate-y-[15%]">
+            <div className="absolute bottom-0 left-0 z-50 flex w-full translate-y-[-25%] items-center justify-center sm:translate-y-[15%]">
                 <Image
                     className="mx-auto max-w-[180px] sm:max-w-[300px] md:max-w-[400px]"
                     src="/images/sigma-vegas-logo-2026.png"
