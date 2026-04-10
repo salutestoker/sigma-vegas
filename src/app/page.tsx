@@ -1,4 +1,5 @@
 import EventbriteModalButton from '@/app/components/EventbriteModalButton';
+import HardRockDirectionsLink from '@/app/components/HardRockDirectionsLink';
 import NftPerksOverlayButton from '@/app/components/NftPerksOverlayButton';
 import Image from 'next/image';
 export default function Home() {
@@ -7,7 +8,8 @@ export default function Home() {
             <div className="font-primary font-impact z-100 flex w-full items-center justify-center text-center text-red-700 uppercase sm:hidden">
                 <div className="flex items-center gap-1">
                     <div className="flex w-full items-center justify-center gap-1 px-1 py-2">
-                        April 30th, 2026, 8pm - 12am @ Hard Rock Cafe
+                        April 30th, 2026, 8pm - 12am @{' '}
+                        <HardRockDirectionsLink className="underline underline-offset-2" />
                     </div>
                 </div>
             </div>
@@ -75,7 +77,7 @@ export default function Home() {
                                         d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
                                     />
                                 </svg>
-                                Hard Rock Cafe
+                                <HardRockDirectionsLink className="underline decoration-transparent underline-offset-2 transition hover:decoration-current" />
                             </div>
                         </div>
                     </div>
