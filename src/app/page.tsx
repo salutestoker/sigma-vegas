@@ -90,7 +90,6 @@ export default function Home() {
                             label="RSVP"
                         />
                         <NftPerksOverlayButton triggerClassName="primary-button" />
-
                         <a
                             href="mailto:sigmaonxrplnfts@gmail.com"
                             className="primary-button"
@@ -102,6 +101,13 @@ export default function Home() {
                             className="primary-button"
                         >
                             Become VIP
+                        </a>
+                        <a
+                            target="_blank"
+                            href="https://app.cruise-control.xyz/raffle"
+                            className="primary-button w-full md:col-span-2 md:w-[calc((100%-0.5rem)/2)] md:justify-self-center"
+                        >
+                            Rolex Raffle
                         </a>
                     </div>
                 </div>
